@@ -8,4 +8,4 @@ if(CMAKE_COMPILER_IS_GNUCXX)
 endif(CMAKE_COMPILER_IS_GNUCXX)
 
 set(SOURCE_FILES main.cpp)
-add_executable(${PROJECT_NAME}-Exercise7 ${SOURCE_FILES})
+add_executable(${PROJECT_NAME}-Exercise1 ${SOURCE_FILES})
