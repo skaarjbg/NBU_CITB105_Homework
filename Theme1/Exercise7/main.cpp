@@ -37,7 +37,7 @@ void get_user_input(string input_msg, float *number) {
 
     //Ask for input again when user input is invalid
     if (cin.fail()) {
-        cout << "Not a number!" << endl;
+        cerr << "Not a number!" << endl;
         cin.clear();
         cin.ignore(10000, '\n');
         get_user_input(input_msg, number);
