@@ -3,7 +3,9 @@
  */
 
 #include <iostream>
-#define CHECK_VALID_GRADE(x) if((x >= 2) && (x <= 6)) (x); else { cerr << "Error!"; return 123; }
+
+#define CHECK_VALID_GRADE(x) ((x >= 2) && (x <= 6)) ? 1 : 0
+#define GRADE_OUT_OF_RANGE "Grade out of range (2 <= grade <= 6) : "
 
 using namespace std;
 
@@ -26,14 +28,29 @@ int main(int argc, char *argv[]) {
     student.grade2 = atof(argv[5]);
     student.grade3 = atof(argv[6]);
 
-    CHECK_VALID_GRADE(student.grade3);
-//    for(int i = 0; i < argc; i++) {
-//        double num = atof(argv[i+4]);
-//        if(num > 6 && num < 2) {
-//            cerr <<  "Grade " << i << " is out of bounds (2 <= grade <= 6)";
-//            return 134;
-//        }
-//    }
+    double num = atof(argv[4]);
+    if (CHECK_VALID_GRADE(num)) {
+        student.grade1 = num;
+    } else {
+        cerr << GRADE_OUT_OF_RANGE << num << endl;
+        return 123;
+    }
+
+    num = atof(argv[5]);
+    if (CHECK_VALID_GRADE(num)) {
+        student.grade2 = num;
+    } else {
+        cerr << GRADE_OUT_OF_RANGE << num << endl;
+        return 123;
+    }
+
+    num = atof(argv[6]);
+    if (CHECK_VALID_GRADE(num)) {
+        student.grade3 = num;
+    } else {
+        cerr << GRADE_OUT_OF_RANGE << num << endl;
+        return 123;
+    }
 
     double median_grade = (student.grade1 + student.grade2 + student.grade3) / 3;
 
