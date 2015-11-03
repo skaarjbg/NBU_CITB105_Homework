@@ -8,8 +8,6 @@
 static const char *symbols = "+-";
 static const char *letters = "ABCDF";
 
-int get_value_from_enum(char);
-double parse_input(char);
 
 enum States {
     GOT_A,
@@ -26,4 +24,8 @@ enum Letter_values {
     D = 2,
     F = 0
 };
+
+int get_value_from_enum(char);
+double parse_input(char);
+
 #endif //NBU_CITB105_HOMEWORK_MAIN_H

@@ -5,8 +5,6 @@
 #ifndef NBU_CITB105_HOMEWORK_MAIN_H
 #define NBU_CITB105_HOMEWORK_MAIN_H
 
-Cards get_card_from_char(char);
-Colors get_color_from_char(char);
 
 enum Cards {
     TWO = 2,
@@ -53,4 +51,8 @@ static const char *colors_list[]{
         (char *) "Spades",
         (char *) "Clubs"
 };
+
+Cards get_card_from_char(char);
+Colors get_color_from_char(char);
+
 #endif //NBU_CITB105_HOMEWORK_MAIN_H
