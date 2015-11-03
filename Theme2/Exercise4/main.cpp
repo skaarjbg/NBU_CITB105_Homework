@@ -7,7 +7,7 @@
 #define CHECK_VALID_GRADE(x) ((x >= 2) && (x <= 6)) ? 1 : 0
 #define GRADE_OUT_OF_RANGE "Grade out of range (2 <= grade <= 6) : "
 
-#define ERROR 123
+#define ERROR -1
 
 using namespace std;
 

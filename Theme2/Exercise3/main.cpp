@@ -7,7 +7,7 @@
 
 #include "main.h"
 
-#define ERROR 123
+#define ERROR -1
 
 using namespace std;
 
