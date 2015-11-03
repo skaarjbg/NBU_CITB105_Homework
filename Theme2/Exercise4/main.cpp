@@ -7,6 +7,8 @@
 #define CHECK_VALID_GRADE(x) ((x >= 2) && (x <= 6)) ? 1 : 0
 #define GRADE_OUT_OF_RANGE "Grade out of range (2 <= grade <= 6) : "
 
+#define ERROR 123
+
 using namespace std;
 
 typedef struct student {
@@ -33,7 +35,7 @@ int main(int argc, char *argv[]) {
         student.grade1 = num;
     } else {
         cerr << GRADE_OUT_OF_RANGE << num << endl;
-        return 123;
+        return ERROR;
     }
 
     num = atof(argv[5]);
@@ -41,7 +43,7 @@ int main(int argc, char *argv[]) {
         student.grade2 = num;
     } else {
         cerr << GRADE_OUT_OF_RANGE << num << endl;
-        return 123;
+        return ERROR;
     }
 
     num = atof(argv[6]);
@@ -49,7 +51,7 @@ int main(int argc, char *argv[]) {
         student.grade3 = num;
     } else {
         cerr << GRADE_OUT_OF_RANGE << num << endl;
-        return 123;
+        return ERROR;
     }
 
     double median_grade = (student.grade1 + student.grade2 + student.grade3) / 3;

@@ -7,12 +7,14 @@
 
 #include "main.h"
 
+#define ERROR 123
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
     if (argc < 2) {
         cerr << "NO INPUT" << endl;
-        return 123;
+        return ERROR;
     }
     size_t length = 0;
     length = strlen(argv[1]);

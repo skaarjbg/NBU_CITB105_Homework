@@ -19,6 +19,8 @@
 
 #include "main.h"
 
+#define ERROR 123
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -31,7 +33,7 @@ int main(int argc, char *argv[]) {
 
     if (strlen(argv[1]) > 2) {
         cerr << "Input too long" << endl;
-        return 153;
+        return ERROR;
     }
 
     for (int i = 0; i < 2; i++) {
@@ -45,7 +47,7 @@ int main(int argc, char *argv[]) {
             card = string(card_list[num]);
         } else {
             cerr << "Invalid input - " << c << endl;
-            return 121;
+            return ERROR;
         }
     }
     cout << card << " of " << color << endl;
