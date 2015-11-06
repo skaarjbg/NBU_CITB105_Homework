@@ -20,6 +20,7 @@ int main(int argc, char *argv[]) {
     length = strlen(argv[1]);
     if (length < 2) {
         cerr << "TOO SHORT INPUT" << endl;
+        return ERROR;
     }
     double result = 0;
     for (int i = 0; i < length; i++) {
