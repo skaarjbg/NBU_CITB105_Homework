@@ -23,10 +23,9 @@ int main(int argc, char *argv[]) {
     wcout << "Please enter a string" << endl;
     wcin.getline(input, 255);
 
-    //strings with uneven number of characters cannot be palindromes
     if(wcslen(input) % 2 != 0 ) {
-        wcout << input << " is not a palindrome" << endl;
-        return EXIT_SUCCESS;
+        wcerr << "Strings with uneven number of characters cannot be palindromes!" << endl;
+        return ERROR;
     }
 
     //get a pointer to the end of the string
